@@ -1,0 +1,36 @@
+<div class="slide-pane{% if dir %} from-{{ dir }}{% endif %}">
+  <div class="slide-content">
+    <h1>{{ title }}</h1>
+    <p>{{ body }}</p>
+  </div>
+
+  <nav>
+    {% if prev is not none %}
+    <button
+      type="button"
+      hx-get="/slides/{{ prev }}?dir=prev"
+      hx-target="#deck"
+      hx-swap="innerHTML"
+    >
+      ← Back
+    </button>
+    {% else %}
+    <button type="button" disabled>← Back</button>
+    {% endif %}
+
+    <span class="counter">{{ index + 1 }} / {{ total }}</span>
+
+    {% if next is not none %}
+    <button
+      type="button"
+      hx-get="/slides/{{ next }}?dir=next"
+      hx-target="#deck"
+      hx-swap="innerHTML"
+    >
+      Forward →
+    </button>
+    {% else %}
+    <button type="button" disabled>Forward →</button>
+    {% endif %}
+  </nav>
+</div>
