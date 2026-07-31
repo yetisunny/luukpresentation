@@ -82,6 +82,7 @@ async fn print_bullshit(x: i32) -> i32 {
 async fn sick_new_screen() -> impl IntoResponse {
     //hahah
     //this is an addition to the new screen
+    //more shit
     return "<!DOCTYPE html>"
 }
 
