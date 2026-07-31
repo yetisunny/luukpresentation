@@ -76,6 +76,7 @@ fn slide_context(index: usize, dir: Option<&str>) -> Option<minijinja::Value> {
 
 async fn sick_new_screen() -> impl IntoResponse {
     //hahah
+    //this is an addition to the new screen
     return "<!DOCTYPE html>"
 }
 
