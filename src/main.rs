@@ -73,6 +73,10 @@ fn slide_context(index: usize, dir: Option<&str>) -> Option<minijinja::Value> {
     })
 }
 
+async fn other_screen() -> impl IntoResponse {
+    return "<!DOCTYPE html>"
+}
+
 async fn index() -> impl IntoResponse {
     let Some(slide) = slide_context(0, None) else {
         return (StatusCode::NOT_FOUND, "no slides".to_string()).into_response();
