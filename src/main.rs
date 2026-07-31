@@ -73,15 +73,8 @@ fn slide_context(index: usize, dir: Option<&str>) -> Option<minijinja::Value> {
     })
 }
 
-async fn second_other_screen() -> impl IntoResponse {
-    return "<!DOCTYPE html>"
-}
 
-async fn third_other_screen() -> impl IntoResponse {
-    return "<!DOCTYPE html>"
-}
-
-async fn other_screen() -> impl IntoResponse {
+async fn sick_new_screen() -> impl IntoResponse {
     //hahah
     return "<!DOCTYPE html>"
 }
