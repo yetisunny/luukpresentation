@@ -75,6 +75,7 @@ fn slide_context(index: usize, dir: Option<&str>) -> Option<minijinja::Value> {
 }
 
 async fn print_bullshit(x: i32) -> i32 {
+    //bru
     x
 }
 
