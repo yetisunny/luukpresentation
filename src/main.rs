@@ -7,6 +7,7 @@ use axum::{
 };
 use minijinja::Environment;
 use serde::Deserialize;
+use tokio::io::Interest;
 use std::net::SocketAddr;
 use std::sync::OnceLock;
 
@@ -73,6 +74,9 @@ fn slide_context(index: usize, dir: Option<&str>) -> Option<minijinja::Value> {
     })
 }
 
+async fn print_bullshit(x: i32) -> i32 {
+    x
+}
 
 async fn sick_new_screen() -> impl IntoResponse {
     //hahah
